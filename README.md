@@ -1,33 +1,36 @@
-Am I Fire 🚀
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-An unapologetic, open-source, analytical way to A/B test your dating profile.
+## Getting Started
 
-Is your Tinder profile getting the attention it deserves? Say hello to Am I Fire - your personal wingman in the world of online dating! 🔥
-What is Am I Fire?
+First, run the development server:
 
-Am I Fire is not just an app; it's your secret weapon for standing out in the crowded world of dating apps. No more second-guessing or relying on gut feelings - let data guide you to dating success!
-🔥 Features that Ignite Your Dating Game:
-A/B Testing Made Easy
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Wondering if a different profile picture or a snappier bio could make a difference? With Am I Fire, A/B testing is a breeze! Compare different elements of your profile to find what sparks the most interest.
-Analytics Dashboard
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Ditch the confusion! Our intuitive dashboard breaks down the numbers, giving you a clear picture of which profile variations are setting your Tinder world on fire. 📊
-Data-Driven Decisions
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Make informed choices that resonate with your audience. Am I Fire provides you with statistical insights, helping you fine-tune your profile for maximum impact. 💡
-Open Source Freedom
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Am I Fire is not just an app; it's a community! Contribute, customize, and shape the platform to fit your dating style. The power is in your hands! ✨
-Get Started in 3 Easy Steps:
+## Learn More
 
-    Discover Your Spark: Clone the repo and set up your dating experiments.
-    Ignite Curiosity: Create variations, run tests, and let the data flow.
-    Flame On!: Analyze the results, make tweaks, and watch your dating profile blaze with success.
+To learn more about Next.js, take a look at the following resources:
 
-Love in Every Line of Code 💖
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-Am I Fire is not just about algorithms; it's about finding your perfect match. Contribute to the code, spread the love, and let's make dating profiles great again! 🚀
-License
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-Am I Fire is open-source software licensed under the MIT License. Feel the freedom!
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
