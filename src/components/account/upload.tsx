@@ -58,9 +58,11 @@ export default function UploadButton({ uid }: { uid: string }) {
           alert(error.message);
         },
         async () => {
-          getDownloadURL(uploadTask.snapshot.ref).then(
-            async (downloadURL) => await createImageDoc(downloadURL)
-          );
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await createImageDoc(downloadURL);
+            setFile(undefined);
+            setUploading(false);
+          });
         }
       );
     }
