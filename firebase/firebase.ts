@@ -4,6 +4,7 @@ import { initializeApp, getApps } from "firebase/app";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 
@@ -38,6 +39,7 @@ if (!getApps().length) {
   app = getApps()[0]; // if already initialized, use that one
 }
 export const auth = getAuth(app);
+export const db = getFirestore(app);
 export const storeage = getStorage(app);
 export const googleProvider = new GoogleAuthProvider();
 export const signInWithGooglePopup = () =>
