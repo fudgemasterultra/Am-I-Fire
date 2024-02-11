@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { initializeApp, getApps } from "firebase/app";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import { getAnalytics } from "firebase/analytics";
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -11,25 +11,35 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+console.log(process.env.NEXT_PUBLIC_FIREBASEAPI);
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASEAPI,
+  apiKey: process.env.NEXT_PUBLIC_FIREBASEAPI,
 
-  authDomain: process.env.FIREBASEAUTHDOMAIN,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASEAUTHDOMAIN,
 
-  projectId: process.env.FIREBASEPROJECTID,
+  projectId: process.env.NEXT_PUBLIC_FIREBASEPROJECTID,
 
-  storageBucket: process.env.STORAGEBUCKET,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGEBUCKET,
 
-  messagingSenderId: process.env.MESSAGINGSENDERID,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGINGSENDERID,
 
-  appId: process.env.APPID,
+  appId: process.env.NEXT_PUBLIC_APPID,
 
-  measurementId: process.env.MEASUREMENTID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID,
 };
 
-// Initialize Firebase
+let app;
 
-export const app = initializeApp(firebaseConfig);
+if (!getApps().length) {
+  app = initializeApp(firebaseConfig);
+} else {
+  app = getApps()[0]; // if already initialized, use that one
+}
 export const auth = getAuth(app);
+
+export const googleProvider = new GoogleAuthProvider();
+export const signInWithGooglePopup = () =>
+  signInWithPopup(auth, googleProvider);
+
 //const analytics = getAnalytics(app);
