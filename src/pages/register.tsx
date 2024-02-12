@@ -7,7 +7,7 @@ import {
 
 export default function SignUp() {
   const [user, loading, error] = useAuthState(auth);
-  if (user) {
+  if (user && !user.isAnonymous) {
     const router = useRouter();
     router.push("/");
   }
@@ -21,7 +21,7 @@ export default function SignUp() {
         rel="stylesheet"
         href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
       />
-      <section className="bg-blueGray-50">
+      <section className="bg-blueGray-50 h-screen">
         <div className="w-full lg:w-4/12 px-4 mx-auto pt-6">
           <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-200 border-0">
             <div className="rounded-t mb-0 px-6 py-6">

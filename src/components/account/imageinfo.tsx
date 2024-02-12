@@ -29,12 +29,12 @@ export default function AccountImageView({ uid }: { uid: string }) {
                     />
                     <CardContent>
                       <div className="flex content-center justify-between">
-                        <div className="flex">
-                          <ThumbUpSharp />
+                        <div className="flex gap-2">
+                          <ThumbUpSharp color="success" />
                           <p>{Math.round((likes / total) * 100) || 0}%</p>
                         </div>
-                        <div className="flex">
-                          <ThumbDownSharp />
+                        <div className="flex gap-2">
+                          <ThumbDownSharp color="error" />
                           <p>{Math.round(dislike / total) * 100 || 0}%</p>
                         </div>
                       </div>

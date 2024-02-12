@@ -5,4 +5,8 @@ export namespace Types {
     likes: string[];
     dislikes: string[];
   };
+  export type DocedImageDoc = {
+    id: string;
+    image: ImageDoc;
+  };
 }
